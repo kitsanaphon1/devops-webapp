@@ -17,8 +17,8 @@ jobs:
         with:
           dotnet-version: '9.0.x'
 
-      - name: Restore Dependencies
-        run: dotnet restore WebApiProject/WebApiProject.csproj
+      # - name: Restore Dependencies
+      #   run: dotnet restore WebApiProject/WebApiProject.csproj
 
       - name: Build Docker Image with Compose
         run: docker-compose build
