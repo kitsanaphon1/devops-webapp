@@ -49,3 +49,6 @@ jobs:
       - name: 📤 Push Docker Image
         run: |
           docker push myapp:${{ steps.get_version.outputs.version-without-v }}
+
+
+          teetstststtts
