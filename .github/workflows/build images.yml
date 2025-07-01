@@ -1,0 +1,27 @@
+name: Build images api
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-and-scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: Restore Dependencies
+        run: dotnet restore WebApiProject/WebApiProject.csproj
+
+      - name: Build Docker Image with Compose
+        run: docker-compose build
+
+
+
