@@ -20,6 +20,9 @@ jobs:
       # - name: Restore Dependencies
       #   run: dotnet restore WebApiProject/WebApiProject.csproj
 
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
       - name: Build Docker Image with Compose
         run: docker-compose build
 
