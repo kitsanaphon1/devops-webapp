@@ -21,7 +21,7 @@ services:
       timeout: 5s
 
   webapi:
-    image: sooyaa02/noteapi:lastest
+    image: sooyaa02/noteapi:latest
     container_name: webapi_container
     build:
       context: ./WebApiProject
